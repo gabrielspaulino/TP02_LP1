@@ -1,0 +1,48 @@
+package tp02ex06;
+import java.util.Scanner;
+public class TP02Ex06 {
+
+    public static void main(String[] args) {
+        //Danilo Gabriel 
+        //Gabriel Paulino        
+        //1. Entrar via teclado com 6 nomes, armazená-los em uma matriz de ordem 2x3, exibir os nomes digitados
+        Scanner teclado = new Scanner(System.in);
+        String[][] matriz = new String[2][3];
+        int contadorx = 0;
+        int contadory;
+
+        while(contadorx < 2)
+        {
+            contadory = 0;
+            while(contadory < 3)
+            {
+                System.out.print("Digite um nome: ");
+                matriz[contadorx][contadory] = teclado.nextLine();
+                contadory++;
+            }
+            contadorx++;
+        }
+        System.out.print("Os nomes digitados foram ");
+        contadorx = 0;
+        contadory = 0;
+        while(contadorx < 2)
+        {
+            contadory = 0;
+            while(contadory < 3)
+            {
+                if(contadorx == 1 && contadory == 2)
+                {
+                    System.out.print(matriz[contadorx][contadory] + ".\n");
+                    contadory++;
+                }
+                else
+                {
+                System.out.print(matriz[contadorx][contadory] + ", ");
+                contadory++;
+                }
+            }
+            contadorx++;
+        }
+    }
+
+}
