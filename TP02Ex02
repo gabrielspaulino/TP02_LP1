@@ -1,0 +1,36 @@
+package tp02ex02;
+import java.util.Scanner;
+public class TP02Ex02 {
+
+    public static void main(String[] args) {
+        //Danilo Gabriel 
+        //Gabriel Paulino        
+        //1. Entrar via teclado com 10 valores positivos, calcular a soma e a média entre eles, exibir o maior valor, a soma e a média entre eles
+        Scanner teclado = new Scanner(System.in);
+        int contador = 0;
+        int[] n = new int[10];
+        int maior = -1;
+        double soma = 0;
+        double media;
+
+        while(contador < 10)
+        {
+            do{
+            System.out.print("Digite um valor positivo: ");
+            n[contador] = teclado.nextInt();
+            }while(n[contador] < 0);
+
+            if(n[contador] > maior)
+            {
+                maior = n[contador];
+            }
+            soma += n[contador];
+            contador++;
+        }
+        media = soma  / 10;
+        System.out.println("O maior valor digitado foi " + maior);
+        System.out.println("A soma dos valores digitados é igual a " + soma);
+        System.out.println("A média aritmética entre os valor digitados é igua a " + media);
+    }
+
+}
