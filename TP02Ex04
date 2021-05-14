@@ -1,0 +1,48 @@
+package tp02ex04;
+import java.util.Scanner;
+public class TP02Ex04 {
+
+    public static void main(String[] args) {
+        //Danilo Gabriel 
+        //Gabriel Paulino        
+        //1. Entrar via teclado com 6 valores, armazená-los em uma matriz de ordem 2x3, exibir os valores digitados
+        Scanner teclado = new Scanner(System.in);
+        int[][] matriz = new int[2][3];
+        int contadorx = 0;
+        int contadory;
+
+        while(contadorx < 2)
+        {
+            contadory = 0;
+            while(contadory < 3)
+            {
+                System.out.print("Digite um valor: ");
+                matriz[contadorx][contadory] = teclado.nextInt();
+                contadory++;
+            }
+            contadorx++;
+        }
+        System.out.print("Os valores digitados foram ");
+        contadorx = 0;
+        contadory = 0;
+        while(contadorx < 2)
+        {
+            contadory = 0;
+            while(contadory < 3)
+            {
+                if(contadorx == 1 && contadory == 2)
+                {
+                    System.out.print(matriz[contadorx][contadory] + ".\n");
+                    contadory++;
+                }
+                else
+                {
+                System.out.print(matriz[contadorx][contadory] + ", ");
+                contadory++;
+                }
+            }
+            contadorx++;
+        }
+    }
+
+}
