@@ -1,0 +1,61 @@
+package tp02ex08;
+import java.util.Scanner;
+public class TP02Ex08 {
+
+    public static void main(String[] args) {
+        //Danilo Gabriel 
+        //Gabriel Paulino        
+        /*1. Entrar via teclado com 12 valores e uma constante multiplicativa, armazenar os valores em uma matriz de ordem 3x4
+        e os valores multiplicados pela constante em outra matriz 3x4, exibir as duas matrizes */
+        Scanner teclado = new Scanner(System.in);
+        int[][] matriz = new int[3][4];
+        int[][] multiplicada = new int[3][4];
+        int constante;
+        int contadorx = 0;
+        int contadory;
+        
+        System.out.print("Digite a constante multiplicativa: ");
+        constante = teclado.nextInt();
+        while(contadorx < 3)
+        {
+            contadory = 0;
+            while(contadory < 4)
+            {
+                System.out.print("Digite um valor: ");
+                matriz[contadorx][contadory] = teclado.nextInt();
+                multiplicada[contadorx][contadory] = matriz[contadorx][contadory] * constante;
+                contadory++;
+            }
+            contadorx++;
+        }
+        System.out.println("Matriz com os números digitados: ");
+        contadorx = 0;
+        contadory = 0;
+        while(contadorx < 3)
+        {
+            System.out.print("\n");
+            contadory = 0;
+            while(contadory < 4)
+            {
+                System.out.printf("%4d", matriz[contadorx][contadory]);
+                contadory++;
+            }
+            contadorx++;
+        }
+        System.out.println("\n\nMatriz com os números multiplicados pela constante: ");
+        contadorx = 0;
+        contadory = 0;
+        while(contadorx < 3)
+        {
+            System.out.print("\n");
+            contadory = 0;
+            while(contadory < 4)
+            {
+                System.out.printf("%4d", multiplicada[contadorx][contadory]);
+                contadory++;
+            }
+            contadorx++;
+        }
+    }
+
+}
